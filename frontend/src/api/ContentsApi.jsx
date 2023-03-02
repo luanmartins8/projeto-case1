@@ -18,7 +18,7 @@ const ContentsApi = () => {
           }
        })
       },
-      createContent (titulo, descricao, porcentagem) {
+      createContent (id, titulo, autor, temporadas, episodios, status) {
         return fetch(`${url}/conteudo`, {
           method: 'POST',
           headers: {
@@ -26,14 +26,17 @@ const ContentsApi = () => {
           },
           body: JSON.stringify(
             {
+              id: id,
               titulo: titulo,
-              descricao: descricao,
-              porcentagem: porcentagem
+              autor: autor,
+              temporadas: temporadas,
+              episodios: episodios,
+              status: status
             }
           )
        })
       },
-      updateContent(contentId, titulo, descricao, porcentagem) {
+      updateContent(contentId, id, autor, titulo, temporadas, episodios, status) {
         return fetch(`${url}/conteudo/${contentId}`, {
           method: 'PUT',
           headers: {
@@ -41,9 +44,12 @@ const ContentsApi = () => {
           },
           body: JSON.stringify(
             {
+              id: id,
+              autor: autor,
               titulo: titulo,
-              descricao: descricao,
-              porcentagem: porcentagem
+              temporadas: temporadas,
+              episodios: episodios,
+              status: status
             }
           )
        })

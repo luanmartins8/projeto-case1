@@ -58,6 +58,7 @@ function App() {
       }).then(res => {
         setContents([...contents, {
           id: res.contentId,
+          autor: req.autor.value,
           titulo: req.titulo.value,
           temporadas: Number(req.temporadas.value),
           episodios: Number(req.episodios.value),
@@ -85,6 +86,7 @@ function App() {
         if(cont.id === selectedContent.id) {
           return {
             id: selectedContent.id,
+            autor: req.autor.value,
             titulo: req.titulo.value,
             temporadas: Number(req.temporadas.value),
             episodios: Number(req.episodios.value),

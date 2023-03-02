@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS "conteudos" (
   );`;
 
 const ADD_CONTENTS_DATA = `
-INSERT INTO PRODUTO (id, titulo, autor, temporadas, episodios, status) VALUES
+INSERT INTO conteudos (id, titulo, autor, temporadas, episodios, status) VALUES
 (1, 'Avatar: A Lenda de Aang', 'Michael Dante DiMartino e Bryan Konietzko', 3, 61, 'Finalizada'),
 (2, 'Avatar: A Lenda de Korra', 'Michael Dante DiMartino e Bryan Konietzko', 4, 52, 'Finalizada'),
 (3, 'Voltron', 'Choi Goun, Kim Young Hyun, Kim Seul Ki, Lee Soo Kyung', 8, 76, 'Finalizada')`
